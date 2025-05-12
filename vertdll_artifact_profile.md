@@ -1,6 +1,6 @@
 #  Forensic Artifact Profile: `vertdll.dll`
 
-		This report documents the discovery and forensic analysis of a suspicious system binary, `vertdll.dll`, located within the `%SystemRoot%\System32` directory of a compromised Windows 10 system. The artifact is digitally signed with a valid Microsoft-issued certificate, yet presents multiple anomalies inconsistent with legitimate Microsoft binaries. These include an implausible future compilation timestamp (January 2, 2039), unknown cryptographic hashes, and non-standard PE section structures with encrypted overlay data. Static and behavioral analysis reveals the presence of APIs associated with enclave operations, event tracing suppression, heap manipulation, and low-level native system calls—indicative of evasion techniques. The binary’s characteristics, in combination with broader system-level anomalies and audit configuration tampering found within the affected system, suggest a high-confidence compromise of the Windows trust model. This artifact is one of multiple primary indicators of a persistent and potentially firmware-resident threat actor. 
+**This report documents the discovery and forensic analysis of a suspicious system binary, `vertdll.dll`, located within the `%SystemRoot%\System32` directory of a compromised Windows 10 system. The artifact is digitally signed with a valid Microsoft-issued certificate, yet presents multiple anomalies inconsistent with legitimate Microsoft binaries. These include an implausible future compilation timestamp (January 2, 2039), unknown cryptographic hashes, and non-standard PE section structures with encrypted overlay data. Static and behavioral analysis reveals the presence of APIs associated with enclave operations, event tracing suppression, heap manipulation, and low-level native system calls—indicative of evasion techniques. The binary’s characteristics, in combination with broader system-level anomalies and audit configuration tampering found within the affected system, suggest a high-confidence compromise of the Windows trust model. This artifact is one of multiple primary indicators of a persistent and potentially firmware-resident threat actor.**
 
 
 ##  Artifact Summary
@@ -135,6 +135,4 @@
     "ETW/Heap/Enclave Abuse"
   ],
   "confidence": "High",
-  "recommended_action": "Isolate, submit to MSRC, preserve with forensic chain"
 }
-```
